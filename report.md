@@ -1,3 +1,4 @@
+
 # General description or introduction of the problem and your solution
 
 This homework is very similar to hw01. Req01 is same as previous req02. Req02 is similar to previous req02 with modification on pixels transfering. It requires us
@@ -213,8 +214,19 @@ none
 
 # Experimental results (on different benchmarks and settings)
 
-origin image
-![]()
+## origin image
+![lena_std_short](https://user-images.githubusercontent.com/76727373/112020617-74aa2000-8b6b-11eb-9897-ef471ba26100.png)
+## req01 generated img
+![req01](https://user-images.githubusercontent.com/76727373/112020712-8ab7e080-8b6b-11eb-8f3e-42f7223407b5.png)
+## req02 generated img
+![req01](https://user-images.githubusercontent.com/76727373/112020712-8ab7e080-8b6b-11eb-8f3e-42f7223407b5.png)
+
+As we can see the result is the same from req01 and req02.
+
+## pixels transfer
+req01 pixels transfer count : 589824
+req02 pixels transfer count : 196608
+Difference : 393216(3 times)
 
 # Discussions and conclusions.
 
