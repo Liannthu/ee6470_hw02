@@ -31,10 +31,13 @@ int sc_main(int argc, char **argv) {
   sc_fifo<double> i_r;
   sc_fifo<double> i_g;
   sc_fifo<double> i_b;
+  sc_fifo<int> width;
   tb.i_clk(clk);
   tb.o_rst(rst);
+  tb.o_width(width);
   sobel_filter.i_clk(clk);
   sobel_filter.i_rst(rst);
+  sobel_filter.i_width(width);
   tb.o_r(r);
   tb.o_g(g);
   tb.o_b(b);

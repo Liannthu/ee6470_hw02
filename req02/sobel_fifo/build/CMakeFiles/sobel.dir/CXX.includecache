@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/user/ee6470/hw01/req02/sobel_fifo/SobelFilter.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/SobelFilter.h
 systemc
 -
 filter_def.h
-/home/user/ee6470/hw01/req02/sobel_fifo/filter_def.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/filter_def.h
 
-/home/user/ee6470/hw01/req02/sobel_fifo/Testbench.cpp
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/Testbench.cpp
 cassert
 -
 cstdio
@@ -20,19 +20,19 @@ cstdio
 cstdlib
 -
 Testbench.h
-/home/user/ee6470/hw01/req02/sobel_fifo/Testbench.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/Testbench.h
 
-/home/user/ee6470/hw01/req02/sobel_fifo/Testbench.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/Testbench.h
 string
 -
 systemc
 -
 filter_def.h
-/home/user/ee6470/hw01/req02/sobel_fifo/filter_def.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/filter_def.h
 
-/home/user/ee6470/hw01/req02/sobel_fifo/filter_def.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/filter_def.h
 
-/home/user/ee6470/hw01/req02/sobel_fifo/main.cpp
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/main.cpp
 iostream
 -
 string
@@ -40,9 +40,9 @@ string
 sys/time.h
 -
 SobelFilter.h
-/home/user/ee6470/hw01/req02/sobel_fifo/SobelFilter.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/SobelFilter.h
 Testbench.h
-/home/user/ee6470/hw01/req02/sobel_fifo/Testbench.h
+/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/Testbench.h
 
 /opt/systemc/include/sysc/communication/sc_buffer.h
 sysc/communication/sc_signal.h

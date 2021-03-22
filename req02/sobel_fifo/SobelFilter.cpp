@@ -20,26 +20,35 @@ int mask[MASK_X][MASK_Y] =
 void SobelFilter::do_filter() {
   { wait(); }
   while (true) {
-    for (unsigned int i = 0; i < MASK_N; ++i) {
-      val[i] = 0;
-      wait();
-    }
-    double  red = 0.0, green = 0.0, blue = 0.0;
+    double red = 0.0, green = 0.0, blue = 0.0;
     int  _red = 0.0, _green = 0.0, _blue = 0.0;
-    for (unsigned int v = 0; v < MASK_Y; ++v) {
-      for (unsigned int u = 0; u < MASK_X; ++u) {
+    int width;
+    width = int(i_width.read());
+    wait();
+    for (int i = 0; i < 3; ++i) {
+      for (int j = 0; j < width; ++j){
         _red = int(i_r.read());
         _green = int(i_g.read());
         _blue = int(i_b.read());
-        wait();
-        red += _red * mask[u][v];
-        green += _green * mask[u][v];
-        blue += _blue * mask[u][v];
+        BUFFER[i][j][0] = _red;
+        BUFFER[i][j][1] = _green;
+        BUFFER[i][j][2] = _blue;
         wait();
       }
     }
+    for (int i = 0; i < width; i++){
+      for (int u = 0; u < 3; ++u) {
+        for (int v = 0; v < 3; ++v) {
+          red += BUFFER[u][i+v][0] * mask[v][u];
+          green += BUFFER[u][i+v][1] * mask[v][u];
+          blue += BUFFER[u][i+v][2] * mask[v][u];
+        }
+      }
     o_r.write(red);
     o_g.write(green);
     o_b.write(blue);
+    red = 0; green = 0; blue = 0;
+    }
+    
   }
 }

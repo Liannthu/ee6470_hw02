@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/ee6470/hw01/req02/sobel_fifo
+CMAKE_SOURCE_DIR = /home/user/ee6470/ee6470_hw02/req02/sobel_fifo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/ee6470/hw01/req02/sobel_fifo/build
+CMAKE_BINARY_DIR = /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sobel.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/sobel.dir/flags.make
 
 CMakeFiles/sobel.dir/SobelFilter.cpp.o: CMakeFiles/sobel.dir/flags.make
 CMakeFiles/sobel.dir/SobelFilter.cpp.o: ../SobelFilter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sobel.dir/SobelFilter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sobel.dir/SobelFilter.cpp.o -c /home/user/ee6470/hw01/req02/sobel_fifo/SobelFilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sobel.dir/SobelFilter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sobel.dir/SobelFilter.cpp.o -c /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/SobelFilter.cpp
 
 CMakeFiles/sobel.dir/SobelFilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sobel.dir/SobelFilter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/hw01/req02/sobel_fifo/SobelFilter.cpp > CMakeFiles/sobel.dir/SobelFilter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/SobelFilter.cpp > CMakeFiles/sobel.dir/SobelFilter.cpp.i
 
 CMakeFiles/sobel.dir/SobelFilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sobel.dir/SobelFilter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/hw01/req02/sobel_fifo/SobelFilter.cpp -o CMakeFiles/sobel.dir/SobelFilter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/SobelFilter.cpp -o CMakeFiles/sobel.dir/SobelFilter.cpp.s
 
 CMakeFiles/sobel.dir/Testbench.cpp.o: CMakeFiles/sobel.dir/flags.make
 CMakeFiles/sobel.dir/Testbench.cpp.o: ../Testbench.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sobel.dir/Testbench.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sobel.dir/Testbench.cpp.o -c /home/user/ee6470/hw01/req02/sobel_fifo/Testbench.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sobel.dir/Testbench.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sobel.dir/Testbench.cpp.o -c /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/Testbench.cpp
 
 CMakeFiles/sobel.dir/Testbench.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sobel.dir/Testbench.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/hw01/req02/sobel_fifo/Testbench.cpp > CMakeFiles/sobel.dir/Testbench.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/Testbench.cpp > CMakeFiles/sobel.dir/Testbench.cpp.i
 
 CMakeFiles/sobel.dir/Testbench.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sobel.dir/Testbench.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/hw01/req02/sobel_fifo/Testbench.cpp -o CMakeFiles/sobel.dir/Testbench.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/Testbench.cpp -o CMakeFiles/sobel.dir/Testbench.cpp.s
 
 CMakeFiles/sobel.dir/main.cpp.o: CMakeFiles/sobel.dir/flags.make
 CMakeFiles/sobel.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sobel.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sobel.dir/main.cpp.o -c /home/user/ee6470/hw01/req02/sobel_fifo/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sobel.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sobel.dir/main.cpp.o -c /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/main.cpp
 
 CMakeFiles/sobel.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sobel.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/hw01/req02/sobel_fifo/main.cpp > CMakeFiles/sobel.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/main.cpp > CMakeFiles/sobel.dir/main.cpp.i
 
 CMakeFiles/sobel.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sobel.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/hw01/req02/sobel_fifo/main.cpp -o CMakeFiles/sobel.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/main.cpp -o CMakeFiles/sobel.dir/main.cpp.s
 
 # Object files for target sobel
 sobel_OBJECTS = \
@@ -111,7 +111,7 @@ sobel: CMakeFiles/sobel.dir/main.cpp.o
 sobel: CMakeFiles/sobel.dir/build.make
 sobel: /opt/systemc/lib/libsystemc.so.2.3.3
 sobel: CMakeFiles/sobel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sobel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sobel"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sobel.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/sobel.dir/clean:
 .PHONY : CMakeFiles/sobel.dir/clean
 
 CMakeFiles/sobel.dir/depend:
-	cd /home/user/ee6470/hw01/req02/sobel_fifo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/hw01/req02/sobel_fifo /home/user/ee6470/hw01/req02/sobel_fifo /home/user/ee6470/hw01/req02/sobel_fifo/build /home/user/ee6470/hw01/req02/sobel_fifo/build /home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles/sobel.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/ee6470_hw02/req02/sobel_fifo /home/user/ee6470/ee6470_hw02/req02/sobel_fifo /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/CMakeFiles/sobel.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sobel.dir/depend
 

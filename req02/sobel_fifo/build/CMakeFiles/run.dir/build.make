@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/ee6470/hw01/req02/sobel_fifo
+CMAKE_SOURCE_DIR = /home/user/ee6470/ee6470_hw02/req02/sobel_fifo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/ee6470/hw01/req02/sobel_fifo/build
+CMAKE_BINARY_DIR = /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build
 
 # Utility rule file for run.
 
@@ -57,7 +57,7 @@ CMakeFiles/run: out.bmp
 
 
 out.bmp: sobel
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating out.bmp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating out.bmp"
 	./sobel ../lena_std_short.bmp ./out.bmp
 
 run: CMakeFiles/run
@@ -76,6 +76,6 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 CMakeFiles/run.dir/depend:
-	cd /home/user/ee6470/hw01/req02/sobel_fifo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/hw01/req02/sobel_fifo /home/user/ee6470/hw01/req02/sobel_fifo /home/user/ee6470/hw01/req02/sobel_fifo/build /home/user/ee6470/hw01/req02/sobel_fifo/build /home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/ee6470_hw02/req02/sobel_fifo /home/user/ee6470/ee6470_hw02/req02/sobel_fifo /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build /home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run.dir/depend
 

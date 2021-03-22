@@ -9,6 +9,7 @@ class SobelFilter : public sc_module {
 public:
   sc_in_clk i_clk;
   sc_in<bool> i_rst;
+  sc_fifo_in<int> i_width;
   sc_fifo_in<unsigned char> i_r;
   sc_fifo_in<unsigned char> i_g;
   sc_fifo_in<unsigned char> i_b;
@@ -23,5 +24,6 @@ public:
 private:
   void do_filter();
   int val[MASK_N];
+  unsigned char BUFFER[3][520][3];
 };
 #endif

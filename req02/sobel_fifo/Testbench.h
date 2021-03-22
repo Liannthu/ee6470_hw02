@@ -20,6 +20,7 @@ class Testbench : public sc_module {
 public:
   sc_in_clk i_clk;
   sc_out<bool> o_rst;
+  sc_fifo_out<int> o_width;
   sc_fifo_out<unsigned char> o_r;
   sc_fifo_out<unsigned char> o_g;
   sc_fifo_out<unsigned char> o_b;

@@ -120,47 +120,64 @@ int Testbench::write_bmp(string outfile_name) {
 }
 
 void Testbench::do_sobel() {
-  int x, y, v, u;        // for loop counter
-  unsigned char R, G, B; // color of R, G, B
-  int adjustX, adjustY, xBound, yBound;
+  int x, y, i;        // for loop counter
+  unsigned char BUFFER[3][520][3];
   double red = 0.0,blue = 0.0,green = 0.0;
 
   o_rst.write(false);
   wait(5);
   o_rst.write(true);
   for (y = 0; y != height; ++y) {
+    int y_0, y_1, y_2;
+    y_0 = y - 1;
+    y_1 = y;
+    y_2 = y + 1;
+    if (y_0 == -1) y_0 = 511;
+    if (y_2 == 512) y_2 = 0;
+    BUFFER[0][0][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (511)) + 2)); 
+    BUFFER[0][0][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (511)) + 1));
+    BUFFER[0][0][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (511)) + 0));
+    BUFFER[0][0][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (511)) + 2)); 
+    BUFFER[0][0][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (511)) + 1));
+    BUFFER[0][0][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (511)) + 0));
+    BUFFER[0][0][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (511)) + 2)); 
+    BUFFER[0][0][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (511)) + 1));
+    BUFFER[0][0][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (511)) + 0));
     for (x = 0; x != width; ++x) {
-      adjustX = (MASK_X % 2) ? 1 : 0; // 1
-      adjustY = (MASK_Y % 2) ? 1 : 0; // 1
-      xBound = MASK_X / 2;            // 1
-      yBound = MASK_Y / 2;            // 1
-
-      for (v = -yBound; v != yBound + adjustY; ++v) {   //-1, 0, 1
-        for (u = -xBound; u != xBound + adjustX; ++u) { //-1, 0, 1
-          if (x + u >= 0 && x + u < width && y + v >= 0 && y + v < height) {
-            R = *(source_bitmap +
-                  bytes_per_pixel * (width * (y + v) + (x + u)) + 2);
-            G = *(source_bitmap +
-                  bytes_per_pixel * (width * (y + v) + (x + u)) + 1);
-            B = *(source_bitmap +
-                  bytes_per_pixel * (width * (y + v) + (x + u)) + 0);
-          } else {
-            R = 0;
-            G = 0;
-            B = 0;
-          }
-          o_r.write(R);
-          o_g.write(G);
-          o_b.write(B);
-        }
+      BUFFER[0][x + 1][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (x)) + 2)); 
+      BUFFER[0][x + 1][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (x)) + 1));
+      BUFFER[0][x + 1][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (x)) + 0));
+      BUFFER[1][x + 1][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (x)) + 2));
+      BUFFER[1][x + 1][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (x)) + 1));
+      BUFFER[1][x + 1][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (x)) + 0));
+      BUFFER[2][x + 1][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (x)) + 2));
+      BUFFER[2][x + 1][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (x)) + 1));
+      BUFFER[2][x + 1][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (x)) + 0));
+    }
+    BUFFER[0][513][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (0)) + 2)); 
+    BUFFER[0][513][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (0)) + 1));
+    BUFFER[0][513][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_0) + (0)) + 0));
+    BUFFER[0][513][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (0)) + 2)); 
+    BUFFER[0][513][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (0)) + 1));
+    BUFFER[0][513][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_1) + (0)) + 0));
+    BUFFER[0][513][0] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (0)) + 2)); 
+    BUFFER[0][513][1] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (0)) + 1));
+    BUFFER[0][513][2] = int(*(source_bitmap + bytes_per_pixel * (width * (y_2) + (0)) + 0));
+    o_width.write(width);
+    for (int j = 0; j < 3; j++){
+      for (int j_ = 0; j_ < width; j_++){
+        o_r.write(BUFFER[j][j_][0]);
+        o_g.write(BUFFER[j][j_][1]);
+        o_b.write(BUFFER[j][j_][2]);
       }
-      red = i_r.read();
-      green = i_g.read();
-      blue = i_b.read();
-
-      *(target_bitmap + bytes_per_pixel * (width * y + x) + 2) = std::min(std::max(int(_factor * red + _bias), 0), 255);
-      *(target_bitmap + bytes_per_pixel * (width * y + x) + 1) = std::min(std::max(int(_factor * green + _bias), 0), 255);
-      *(target_bitmap + bytes_per_pixel * (width * y + x) + 0) = std::min(std::max(int(_factor * blue + _bias), 0), 255);
+    }
+    for (i = 0; i < width; i++){
+        red = i_r.read();
+        green = i_g.read();
+        blue = i_b.read();
+        *(target_bitmap + bytes_per_pixel * (width * y + i) + 2) = std::min(std::max(int(_factor * red + _bias), 0), 255);
+        *(target_bitmap + bytes_per_pixel * (width * y + i) + 1) = std::min(std::max(int(_factor * green + _bias), 0), 255);
+        *(target_bitmap + bytes_per_pixel * (width * y + i) + 0) = std::min(std::max(int(_factor * blue + _bias), 0), 255);
     }
   }
   sc_stop();

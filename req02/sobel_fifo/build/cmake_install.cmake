@@ -1,4 +1,4 @@
-# Install script for directory: /home/user/ee6470/hw01/req02/sobel_fifo
+# Install script for directory: /home/user/ee6470/ee6470_hw02/req02/sobel_fifo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/user/ee6470/hw01/req02/sobel_fifo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/ee6470/ee6470_hw02/req02/sobel_fifo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
