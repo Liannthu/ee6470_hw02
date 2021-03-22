@@ -224,8 +224,11 @@ none
 As we can see the result is the same from req01 and req02.
 
 ## pixels transfer
+
 req01 pixels transfer count : 589824
+
 req02 pixels transfer count : 196608
+
 Difference : 393216(3 times)
 
 # Discussions and conclusions.
