@@ -124,6 +124,7 @@ void Testbench::do_sobel() {
   unsigned char R, G, B; // color of R, G, B
   int adjustX, adjustY, xBound, yBound;
   double red = 0.0,blue = 0.0,green = 0.0;
+  int pixel_transfer_c = 0;
 
   o_rst.write(false);
   wait(5);
@@ -152,6 +153,7 @@ void Testbench::do_sobel() {
           o_r.write(R);
           o_g.write(G);
           o_b.write(B);
+          pixel_transfer_c++;
         }
       }
       red = i_r.read();
@@ -163,5 +165,6 @@ void Testbench::do_sobel() {
       *(target_bitmap + bytes_per_pixel * (width * y + x) + 0) = std::min(std::max(int(_factor * blue + _bias), 0), 255);
     }
   }
+  std::cout << "pixel_transfer_c = " << pixel_transfer_c << std::endl;
   sc_stop();
 }

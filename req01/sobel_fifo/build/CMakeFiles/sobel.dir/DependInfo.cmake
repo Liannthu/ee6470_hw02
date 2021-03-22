@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/user/ee6470/hw01/req02/sobel_fifo/SobelFilter.cpp" "/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles/sobel.dir/SobelFilter.cpp.o"
-  "/home/user/ee6470/hw01/req02/sobel_fifo/Testbench.cpp" "/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles/sobel.dir/Testbench.cpp.o"
-  "/home/user/ee6470/hw01/req02/sobel_fifo/main.cpp" "/home/user/ee6470/hw01/req02/sobel_fifo/build/CMakeFiles/sobel.dir/main.cpp.o"
+  "/home/user/ee6470/ee6470_hw02/req01/sobel_fifo/SobelFilter.cpp" "/home/user/ee6470/ee6470_hw02/req01/sobel_fifo/build/CMakeFiles/sobel.dir/SobelFilter.cpp.o"
+  "/home/user/ee6470/ee6470_hw02/req01/sobel_fifo/Testbench.cpp" "/home/user/ee6470/ee6470_hw02/req01/sobel_fifo/build/CMakeFiles/sobel.dir/Testbench.cpp.o"
+  "/home/user/ee6470/ee6470_hw02/req01/sobel_fifo/main.cpp" "/home/user/ee6470/ee6470_hw02/req01/sobel_fifo/build/CMakeFiles/sobel.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

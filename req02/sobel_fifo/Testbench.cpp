@@ -123,6 +123,7 @@ void Testbench::do_sobel() {
   int x, y, i;        // for loop counter
   unsigned char BUFFER[3][520][3];
   double red = 0.0,blue = 0.0,green = 0.0;
+  int pixel_transfer_c = 0;
 
   o_rst.write(false);
   wait(5);
@@ -169,6 +170,7 @@ void Testbench::do_sobel() {
         o_r.write(BUFFER[j][j_][0]);
         o_g.write(BUFFER[j][j_][1]);
         o_b.write(BUFFER[j][j_][2]);
+        pixel_transfer_c++;
       }
     }
     for (i = 0; i < width; i++){
@@ -180,5 +182,6 @@ void Testbench::do_sobel() {
         *(target_bitmap + bytes_per_pixel * (width * y + i) + 0) = std::min(std::max(int(_factor * blue + _bias), 0), 255);
     }
   }
+  std::cout << "pixel_transfer_c = " << pixel_transfer_c << std::endl;
   sc_stop();
 }
